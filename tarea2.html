@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<h1>Tarea 2</h1>
+<p>
+1. Igual que en la tarea 1, crea un archivo html con las respuestas a las preguntas de esta
+tarea. Coloca este archivo en ~/public_html/tarea2/<br/>
+2. Instala nginx en tu computador.<br/>
+3. Crea un archivo de configuración para un nuevo virtual host. Configura dicho virtual host
+para que sirva los archivos en ~/public_html/ utilizando el hostname tarea2.talpor.com
+(Hint: revisa la pregunta 9)<br/>
+4. Crea una página web que muestre tus respuestas a las preguntas teóricas presentadas
+al final de este correo. Cada respuesta debe presentarse en un elemento separado cuyo
+contenido debe ser cargado usando AJAX (puedes usar cualquier framework de
+Javascript: jQuery, Zepto, Dojo, Prototype, etc.). La manera de navegar por estos
+elementos la dejamos como tu decisión.<br/>
+5. Enviarnos antes de las 11:59pm del 22 de Noviembre (el próximo viernes) su archivo de
+configuración y los archivos de su página web, todo dentro de un archivo comprimido.
+Nuestra expectativa es que al usar su configuración de Nginx podamos acceder a
+tarea2.talpor.com en nuestro servidor al que apunta el dominio.<br/>
+</p>
+<h2>Preguntas</h2>
+1. ¿Qué es un Virtual Host?<br/>
+2. ¿Qué es un Web server? Enumere tres de ellos.<br/>
+3. En que puerto(s) suele correr un servidor web?<br/>
+4. Mencione 3 diferencias significativas entre apache y nginx. ¿En qué situaciones es
+preferible utilizar cada uno?<br/>
+5. Mencione qué es CGI? Mencione módulos/implementaciones de CGI para Apache2 y
+NGINX.<br/>
+6. Mencione qué es WSGI? Mencione módulos/implementaciones de WSGI para Apache2
+y NGINX.<br/>
+7. Mencione qué es Rack? Mencione módulos/implementaciones de Rack para Apache2 y
+NGINX.<br/>
+8. Explique que hace el siguiente virtual host (nginx):
+server {
+listen 80;
+server_name talpor.com www.talpor.com;
+rewrite ^ https://talpor.com$request_uri? permanent;
+}
+Explique cómo hacer algo similar en Apache<br/>
+9. Explique que funcionalidad tiene el archivo hosts (/etc/hosts) y como le puede ayudar a
+probar la configuración de un servidor web.<br/>
+</body>
+</html>
+
+
